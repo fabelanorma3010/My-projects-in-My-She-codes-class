@@ -1,5 +1,5 @@
 :root {
-  --branding-color: #6c63ff;
+  --branding-color: #f0421f;
   --secondary-color: #f9f7fe;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
@@ -103,12 +103,12 @@ p {
 }
 
 .btn-contact {
-  background: #800080;
+  background: #cf6a17;
 }
 
 .btn-contact:hover {
   color: white;
-  background: #660066;
+  background: #f57411;
 }
 
 .btn-branding-outline {
@@ -169,7 +169,7 @@ p {
 }
 
 .vercel-project-card a {
-  color: #5148c7;
+  color: #cd2516;
   font-weight: 500;
 }
 
@@ -300,7 +300,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: white;
+  color: rgb(204, 38, 38);
   background: var(--branding-color);
 }
 
