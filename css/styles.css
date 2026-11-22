@@ -102,6 +102,15 @@ p {
   color: white;
 }
 
+.btn-contact {
+  background: #800080;
+}
+
+.btn-contact:hover {
+  color: white;
+  background: #660066;
+}
+
 .btn-branding-outline {
   color: var(--branding-color);
   border: 1px solid var(--branding-color);
@@ -127,8 +136,8 @@ p {
 
 .project-preview-image {
   display: block;
-  width: 80%;
-  max-width: 360px;
+  width: 100%;
+  max-width: 480px;
   margin-right: auto;
   margin-left: auto;
 }
