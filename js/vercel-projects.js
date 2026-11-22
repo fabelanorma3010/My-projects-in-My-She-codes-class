@@ -18,6 +18,12 @@ async function loadVercelProjects() {
         new URL(card.dataset.projectUrl).hostname.toLowerCase()
       )
     );
+    const excludedHosts = new Set(
+      projectList.dataset.excludedProjectHosts
+        .split(",")
+        .map((host) => host.trim().toLowerCase())
+        .filter(Boolean)
+    );
     let added = 0;
 
     for (const project of data.projects) {
@@ -30,6 +36,9 @@ async function loadVercelProjects() {
         throw new Error("Project API returned an invalid website URL");
       }
       if (existingUrls.has(url.hostname.toLowerCase())) {
+        continue;
+      }
+      if (excludedHosts.has(url.hostname.toLowerCase())) {
         continue;
       }
       existingUrls.add(url.hostname.toLowerCase());
