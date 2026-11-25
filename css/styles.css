@@ -213,6 +213,15 @@ p {
   font-size: 30px;
 }
 
+.shop-image {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  align-self: center;
+  border-radius: 6px;
+  margin: 12px 0 20px;
+}
+
 .shop-card .shop-price {
   margin-bottom: 12px;
   font-size: 24px;
