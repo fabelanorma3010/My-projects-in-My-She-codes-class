@@ -332,3 +332,9 @@ footer .social-links a:hover {
     font-size: 32px;
   }
 }
+
+.translation-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
