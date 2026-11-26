@@ -9,6 +9,35 @@ body {
   font-family: var(--default-font-family);
 }
 
+.projects-page {
+  min-height: 100vh;
+  isolation: isolate;
+  color: #fff;
+  background: #101020;
+}
+
+.projects-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(rgb(10 10 25 / 66%), rgb(10 10 25 / 72%)),
+    url("../images/projects-background.jpg") center / cover no-repeat;
+}
+
+.projects-page .content h1,
+.projects-page nav a,
+.projects-page footer .email-link,
+.projects-page footer > p a {
+  color: #fff;
+}
+
+.projects-page nav a:hover,
+.projects-page nav li.active a,
+.projects-page footer .email-link:hover {
+  color: #ffd0ba;
+}
+
 h1,
 h2,
 h3,
