@@ -20,7 +20,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(rgb(0 0 0 / 58%), rgb(0 0 0 / 58%)),
+  background: linear-gradient(rgb(0 0 0 / 54%), rgb(0 0 0 / 54%)),
     url("../images/site-background.jpg") center / contain no-repeat;
 }
 
@@ -82,6 +82,44 @@ p {
   font-weight: normal;
   line-height: 1.5;
   font-size: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.featured-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.featured-projects .vercel-project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featured-projects .btn-branding-outline {
+  margin-top: auto;
+}
+
+.project-card-preview {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .featured-projects {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .content-container {
@@ -304,6 +342,13 @@ footer {
   margin: 60px 0;
 }
 
+.site-footer .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 footer .contact-box {
   background: var(--secondary-color);
   padding: 30px 120px;
@@ -326,12 +371,12 @@ footer p a {
 }
 
 footer .social-links a {
-  margin: 0 20px;
   color: #fff;
   background: var(--branding-color);
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 18px;
+  text-decoration: none;
   transition: all 100ms ease-in-out;
 }
 
