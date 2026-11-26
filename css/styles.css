@@ -1,5 +1,6 @@
 :root {
-  --branding-color: #f0421f;
+  --branding-color: #6424a8;
+  --branding-hover-color: #7a36bd;
   --secondary-color: #f9f7fe;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
@@ -122,21 +123,15 @@ p {
   padding: 15px 30px;
 }
 
-.btn-branding:hover {
-  color: white;
-}
-
-.btn-contact {
-  background: #cf6a17;
-}
-
-.btn-contact:hover {
-  color: white;
-  background: #f57411;
+.btn-branding:hover,
+.btn-branding:focus-visible {
+  color: #fff;
+  background: var(--branding-hover-color);
 }
 
 .btn-branding-outline {
-  color: var(--branding-color);
+  background: var(--branding-color);
+  color: #fff;
   border: 1px solid var(--branding-color);
   border-radius: 4px;
   font-size: 18px;
@@ -145,9 +140,10 @@ p {
   padding: 15px 30px;
 }
 
-.btn-branding-outline:hover {
-  background: var(--branding-color);
-  color: white;
+.btn-branding-outline:hover,
+.btn-branding-outline:focus-visible {
+  background: var(--branding-hover-color);
+  color: #fff;
 }
 
 .project-description {
@@ -193,7 +189,6 @@ p {
 }
 
 .vercel-project-card a {
-  color: #cd2516;
   font-weight: 500;
 }
 
@@ -288,13 +283,19 @@ nav li {
 }
 
 nav a {
+  display: inline-block;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: var(--branding-color);
   text-decoration: none;
   color: #fff;
   transition: all 100ms ease-in-out;
 }
 
 nav a:hover,
+nav a:focus-visible,
 nav li.active a {
+  background: var(--branding-hover-color);
   color: #fff;
   text-decoration: underline;
 }
@@ -326,17 +327,18 @@ footer p a {
 
 footer .social-links a {
   margin: 0 20px;
-  color: var(--branding-color);
-  background: var(--secondary-color);
+  color: #fff;
+  background: var(--branding-color);
   padding: 10px 14px;
-  border-radius: 50%;
+  border-radius: 8px;
   font-size: 18px;
   transition: all 100ms ease-in-out;
 }
 
-footer .social-links a:hover {
-  color: rgb(204, 38, 38);
-  background: var(--branding-color);
+footer .social-links a:hover,
+footer .social-links a:focus-visible {
+  color: #fff;
+  background: var(--branding-hover-color);
 }
 
 @media (max-width: 900px) {
