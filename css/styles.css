@@ -103,7 +103,10 @@ p {
   align-items: flex-start;
 }
 
-.featured-projects .btn-branding-outline {
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: auto;
 }
 
